@@ -1,0 +1,40 @@
+h1{
+    padding: 100px;
+
+}
+.submit-area{
+    box-shadow: 7px 7px 15px gray;
+    border-radius: 20px;
+    padding: 70px;
+}
+
+#transaction-area {
+    display: none;
+}
+.deposit{
+    background-color: indigo;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+}
+.withdraw{
+    background-color: orange;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+}
+.balance{
+    background-color: rgb(16, 170, 16);
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+}
+.boxStyle{
+    margin: 40px 0 20px 0;
+    padding: 50px;
+    box-shadow: 7px 7px 15px gray;
+    border-radius: 20px;
+}
