@@ -7,13 +7,23 @@
           var transactionArea = document.getElementById("transaction-area");
           transactionArea.style.display = "block";
       });
+
+    //   function empty () {
+    //       var emptyValue;
+    //       emptyValue = document.getElementById('emptyValue').value;
+
+    //       if (emptyValue =="") {
+    //           alert ("There is no value. Please, enter your value.");
+    //           return false;
+    //       }
+    //   }
       
       // Deposit Button Handler ;
       var depositBtn = document.getElementById("deposit");
       depositBtn.addEventListener("click", function(){
           var depositAmount = document.getElementById("depositAmount").value;
           var depositNumber = parseFloat(depositAmount);
-        if (depositNumber < 0 ){
+        if (depositNumber < 0){
               alert("Deposit Number Can't be Negative.");
         }
         else{

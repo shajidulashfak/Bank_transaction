@@ -11,12 +11,15 @@
     <div id="login-area">
         <h1 class="text-center">Welcome To Pioneer Bank</h1>
         <div class="submit-area container">
-            <h2>Log in</h2>
-            <input type="email" placeholder="Enter Your Email" class="form-control">
-            <br>
-            <input type="password" placeholder="Password" class="form-control">
-            <br>
-            <button id="login" type="button" class="btn btn-outline-success mx-auto col-12">Submit</button>
+            <form action="#">
+                <h2>Sign in</h2>
+                <br>
+                <input id="emptyValue" type="email" placeholder="Enter Your Email" class="form-control">
+                <br>
+                <input type="password" placeholder="Password" class="form-control">
+                <br>
+                <button id="login" type="button" class="btn btn-outline-success mx-auto col-12 fw-bold" onClick="empty()">Submit</button>
+            </form>
         </div>
     </div>
     <div id="transaction-area" class="container">
