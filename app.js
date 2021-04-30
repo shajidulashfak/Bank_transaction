@@ -39,11 +39,18 @@
        // Withdraw Button Event Handler.
        const WithdrawBtn = document.getElementById("withdraw");
        WithdrawBtn.addEventListener("click", function () {
+
         //  const withdrawAmount = document.getElementById("withdrawAmount");
         //  const withdrawNumber = parseFloat(withdrawAmount);
 
         const withdrawNumber = getInputNumber("withdrawAmount");
-        console.log(withdrawNumber);
+
+        updateSpanText("currentWithdraw", withdrawNumber);
+        updateSpanText("currentBalance", -1 * withdrawNumber);
+
+        // const withdrawNumber = getInputNumber("withdrawAmount");
+        // console.log(withdrawNumber);
+
          document.getElementById("withdrawAmount").value = "";
        });
 
