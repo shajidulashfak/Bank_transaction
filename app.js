@@ -1,4 +1,4 @@
-      //submit button Handler ;
+      //submit button Event Handler ;
 
       var loginBtn = document.getElementById("login");
       loginBtn.addEventListener("click", function(){
@@ -7,67 +7,56 @@
           var transactionArea = document.getElementById("transaction-area");
           transactionArea.style.display = "block";
       });
-
-    //   function empty () {
-    //       var emptyValue;
-    //       emptyValue = document.getElementById('emptyValue').value;
-
-    //       if (emptyValue =="") {
-    //           alert ("There is no value. Please, enter your value.");
-    //           return false;
-    //       }
-    //   }
       
-      // Deposit Button Handler ;
-      var depositBtn = document.getElementById("deposit");
-      depositBtn.addEventListener("click", function(){
-          var depositAmount = document.getElementById("depositAmount").value;
-          var depositNumber = parseFloat(depositAmount);
-        if (depositNumber < 0){
-              alert("Deposit Number Can't be Negative.");
-        }
-        else{
-          updateSpan("currentDeposit", depositNumber);
-          updateSpan("currentBalance", depositNumber);
+      // Deposit Button Event Handler
+      const depositBtn = document.getElementById("deposit");
+      depositBtn.addEventListener ("click", function() {
+        // const depositAmount = document.getElementById("depositAmount").value;
+        // const depositNumber = parseFloat(depositAmount);
 
-          document.getElementById("depositAmount").value = "";
+        const depositNumber = getInputNumber("depositAmount");
+        console.log(depositNumber);
 
-        }
-          // var currentDeposit = document.getElementById("currentDeposit").innerText;
-          // var currentDepositNumber = parseFloat(currentDeposit);
-          // var totalDeposit = depositNumber + currentDepositNumber;
-          
-          // document.getElementById("currentDeposit").innerText = totalDeposit;
+        // General Way Total Deposit & Total Balance Count. 
+        // const currentDeposit = document.getElementById("currentDeposit").innerText;
+        // const currentDepositNumber = parseFloat(currentDeposit);
+        // const totalDeposit = depositNumber + currentDepositNumber;
 
-          // var currentBalance = document.getElementById("currentBalance").innerText;
-          // var currentBalanceNumber = parseFloat(currentBalance);
-          // var totalBalance = depositNumber + currentBalanceNumber;
-          // document.getElementById("currentBalance").innerText = totalBalance;
-      })
+        // document.getElementById("currentDeposit").innerText = totalDeposit;
 
-      function updateSpan(id, depositNumber){
-          var current = document.getElementById(id).innerText;
-          var currentNumber = parseFloat(current);
-          var totalAmount = depositNumber + currentNumber;
-          document.getElementById(id).innerText = totalAmount;
+        // const currentBalance = document.getElementById("currentBalance").innerText;
+        // const currentBalanceNumber = parseFloat(currentBalance);
+        // const totalBalance = depositNumber + currentBalanceNumber;
+        // document.getElementById("currentBalance").innerText = totalBalance;
+
+        // Function Call.
+        updateSpanText("currentDeposit", depositNumber);
+        updateSpanText("currentBalance", depositNumber);
+
+        document.getElementById("depositAmount").value = "";
+      });
+
+       // Withdraw Button Event Handler.
+       const WithdrawBtn = document.getElementById("withdraw");
+       WithdrawBtn.addEventListener("click", function () {
+        //  const withdrawAmount = document.getElementById("withdrawAmount");
+        //  const withdrawNumber = parseFloat(withdrawAmount);
+
+        const withdrawNumber = getInputNumber("withdrawAmount");
+        console.log(withdrawNumber);
+         document.getElementById("withdrawAmount").value = "";
+       });
+
+       function getInputNumber(id) {
+        const Amount = document.getElementById(id).value;
+        const amountNumber = parseFloat(Amount);
+        return amountNumber;
+       }
+
+      // Short Cut Way to Count current Amount & Total Balance with Function.
+      function updateSpanText (id, depositNumber) {
+        const currentAmount = document.getElementById(id).innerText;
+        const currentAmountNumber = parseFloat(currentAmount);
+        const totalBalance = depositNumber + currentAmountNumber;
+        document.getElementById(id).innerText = totalBalance;
       }
-
-      // Withdraw Button Handler ;
-      var withdrawBtn = document.getElementById("withdraw");
-      withdrawBtn.addEventListener("click", function(){
-          var withdrawAmount = document.getElementById("withdrawAmount").value;
-          var withdrawNumber = parseFloat(withdrawAmount);
-      })
-
-      // var withdrawBtn = document.getElementById("withdraw");
-      // withdrawBtn.addEventListener("click", function(){
-      //     var withdrawAmount = document.getElementById("withdrawAmount").value;
-      //     var withdrawNumber = parseFloat(withdrawAmount);
-          
-      //     var currentWithdraw = document.getElementById("currentWithdraw").innerText;
-      //     var currentWithdrawNumber = parseFloat(currentWithdraw);
-      //     var totalWithdraw = currentNumber + currentWithdrawNumber;
-
-          document.getElementById("withdrawAmount").value = "";
-      // })
-   

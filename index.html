@@ -18,25 +18,31 @@
                 <br>
                 <input type="password" placeholder="Password" class="form-control">
                 <br>
-                <button id="login" type="button" class="btn btn-outline-success mx-auto col-12 fw-bold" onClick="empty()">Submit</button>
+                <button id="login" type="button" class="btn btn-outline-success mx-auto col-12 fw-bold">Submit</button>
             </form>
         </div>
     </div>
     <div id="transaction-area" class="container">
         <h1>Transaction Area</h1>
        <div class="row">
+
+           <!-- Deposit Balance -->
            <div class="col-md-4">
                <div class="deposit">
                     <h5>Deposit</h5>
                     <h2>$ <span id="currentDeposit">00</span></h2>
                 </div>
            </div>
+
+           <!-- Withdraw Balance -->
            <div class="col-md-4">
                <div class="withdraw">
                     <h5>Withdraw</h5>
                     <h2>$ <span id="currentWithdraw">00</span></h2>
                </div>
            </div>
+
+           <!-- Total Balance -->
            <div class="col-md-4">
                 <div class="balance">
                     <h5>Balance</h5>
@@ -45,6 +51,8 @@
            </div>
        </div>
        <div class="row">
+
+            <!-- Deposit Area -->
            <div class="col-md-6">
                 <div class="boxStyle">
                     <h3>Deposit</h3>
@@ -53,6 +61,8 @@
                     <button id="deposit" class="btn btn-success">Deposit</button>
                 </div>
            </div>
+
+           <!-- Withdraw Area -->
            <div class="col-md-6">
                 <div class="boxStyle">
                     <h3>Withdraw</h3>
@@ -61,6 +71,7 @@
                     <button class="btn btn-danger" id="withdraw">Withdraw</button>
                 </div>
            </div>
+           
        </div>
     </div>
 </body>
